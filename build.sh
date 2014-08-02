@@ -22,7 +22,7 @@ export LD_LIBRARY_PATH=$HOME/polyml/lib
 git clone --quiet https://github.com/mn200/HOL.git
 pushd HOL
 poly < tools/smart-configure.sml
-bin/build -small -nograph
+bin/build -nograph
 popd
 
 # Create the archive
