@@ -41,6 +41,6 @@ pushd $HOME
 
 # Upload
 
-rsync -Pz cache.tar.xz xrchz@xrchz.strongspace.com:/strongspace/xrchz/cache
+rsync -Pz cache.tar.xz xrchz@xrchz.strongspace.com:/strongspace/xrchz/public/
 
 popd
