@@ -22,7 +22,7 @@ export LD_LIBRARY_PATH=$HOME/polyml/lib
 git clone --quiet https://github.com/mn200/HOL.git
 pushd HOL
 poly < tools/smart-configure.sml
-bin/build -nograph
+bin/build -small -nograph
 popd
 
 # Create the archive
@@ -34,7 +34,9 @@ tar --create --auto-compress --file=cache.tar.xz polyml HOL
 mkdir -p -m700 .ssh
 popd
 mv a $HOME/.ssh/id_rsa
+chmod 600 $HOME/.ssh/id_rsa
 mv b $HOME/.ssh/known_hosts
+chmod 644 $HOME/.ssh/known_hosts
 pushd $HOME
 
 # Upload
