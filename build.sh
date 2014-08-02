@@ -23,6 +23,15 @@ git clone --quiet https://github.com/mn200/HOL.git
 pushd HOL
 poly < tools/smart-configure.sml
 bin/build -nograph
+
+export PATH=$PATH:$HOME/HOL/bin
+
+## CakeML deps in examples 
+
+pushd examples/parsing
+Holmake
+popd
+
 popd
 
 # Create the archive
